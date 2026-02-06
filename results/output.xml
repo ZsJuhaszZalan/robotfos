@@ -1,61 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-06T08:42:46.762690" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-06T09:32:38.688821" rpa="false" schemaversion="5">
 <suite id="s1" name="Robotfos" source="C:\Users\Zsiros-JuhaszZalan\Documents\GitHub\robotfos">
 <suite id="s1-s1" name="SauceDemoLogin" source="C:\Users\Zsiros-JuhaszZalan\Documents\GitHub\robotfos\SauceDemoLogin.robot">
-<test id="s1-s1-t1" name="Login with standard user" line="6">
+<test id="s1-s1-t1" name="Login with standard_user wrong password" line="15">
 <kw name="Open Browser" owner="Selenium2Library">
-<msg time="2026-02-06T08:42:46.914385" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-02-06T09:32:38.841362" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>https://www.saucedemo.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-06T08:42:46.914097" elapsed="0.875294"/>
+<status status="PASS" start="2026-02-06T09:32:38.841074" elapsed="0.935087"/>
 </kw>
 <kw name="Input Text" owner="Selenium2Library">
-<msg time="2026-02-06T08:42:47.790155" level="INFO">Typing text 'standard_user' into text field '//*[@id="user-name"]'.</msg>
+<msg time="2026-02-06T09:32:39.777068" level="INFO">Typing text 'standard_user' into text field '//*[@id="user-name"]'.</msg>
 <arg>//*[@id="user-name"]</arg>
 <arg>standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-06T08:42:47.789770" elapsed="0.077198"/>
+<status status="PASS" start="2026-02-06T09:32:39.776610" elapsed="0.072595"/>
 </kw>
 <kw name="Input Password" owner="Selenium2Library">
-<msg time="2026-02-06T08:42:47.867578" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
-<msg time="2026-02-06T08:42:47.886796" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-02-06T09:32:39.849787" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg time="2026-02-06T09:32:39.872749" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>//*[@id="password"]</arg>
-<arg>secret_sauce</arg>
+<arg>wrong_password</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-06T08:42:47.867293" elapsed="0.050822"/>
+<status status="PASS" start="2026-02-06T09:32:39.849509" elapsed="0.053696"/>
 </kw>
 <kw name="Click Button" owner="Selenium2Library">
-<msg time="2026-02-06T08:42:47.918641" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
+<msg time="2026-02-06T09:32:39.903883" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
 <arg>//*[@id="login-button"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-06T08:42:47.918392" elapsed="0.065433"/>
+<status status="PASS" start="2026-02-06T09:32:39.903554" elapsed="0.054033"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-06T08:42:50.984891" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-02-06T09:32:42.958504" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-06T08:42:47.984111" elapsed="3.001642"/>
+<status status="PASS" start="2026-02-06T09:32:39.957872" elapsed="3.000881"/>
 </kw>
-<kw name="Close Browser" owner="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-06T08:42:50.987252" elapsed="2.138506"/>
+<kw name="Page Should Contain Element" owner="Selenium2Library">
+<msg time="2026-02-06T09:32:42.965786" level="INFO">Current page contains element '//*[@id="login_button_container"]/div/form/div[3]/h3'.</msg>
+<arg>//*[@id="login_button_container"]/div/form/div[3]/h3</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-02-06T09:32:42.959095" elapsed="0.006876"/>
 </kw>
-<status status="PASS" start="2026-02-06T08:42:46.911872" elapsed="6.214635"/>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2026-02-06T09:32:43.091094" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-06T09:32:43.091336" level="FAIL">Page should have contained text 'Username and passworrrd do not match' but did not.</msg>
+<arg>text=Username and passworrrd do not match</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-06T09:32:42.966269" elapsed="0.129811">Page should have contained text 'Username and passworrrd do not match' but did not.</status>
+</kw>
+<status status="FAIL" start="2026-02-06T09:32:38.838774" elapsed="4.257623">Page should have contained text 'Username and passworrrd do not match' but did not.</status>
 </test>
-<status status="PASS" start="2026-02-06T08:42:46.797777" elapsed="6.335915"/>
+<status status="FAIL" start="2026-02-06T09:32:38.724953" elapsed="4.375410"/>
 </suite>
-<status status="PASS" start="2026-02-06T08:42:46.766287" elapsed="6.371144"/>
+<status status="FAIL" start="2026-02-06T09:32:38.692431" elapsed="4.416209"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Robotfos" id="s1" pass="1" fail="0" skip="0">Robotfos</stat>
-<stat name="SauceDemoLogin" id="s1-s1" pass="1" fail="0" skip="0">Robotfos.SauceDemoLogin</stat>
+<stat name="Robotfos" id="s1" pass="0" fail="1" skip="0">Robotfos</stat>
+<stat name="SauceDemoLogin" id="s1-s1" pass="0" fail="1" skip="0">Robotfos.SauceDemoLogin</stat>
 </suite>
 </statistics>
 <errors>

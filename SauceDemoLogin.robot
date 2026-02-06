@@ -18,7 +18,9 @@ Login with standard_user wrong password
     Input Password    //*[@id="password"]    wrong_password
     Click Button    //*[@id="login-button"]
     Sleep   3s
-    Close Browser
+    Page Should Contain Element   //*[@id="login_button_container"]/div/form/div[3]/h3
+    Page Should Contain    text=Username and passworrrd do not match
+    # Close Browser
 
 Login with wrong username and valid_password
     Open Browser    https://www.saucedemo.com/    chrome

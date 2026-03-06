@@ -1,249 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-27T09:45:47.509014" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-03-06T08:49:32.999145" rpa="false" schemaversion="5">
 <suite id="s1" name="Robotfos" source="C:\Users\Zsiros-JuhaszZalan\Documents\GitHub\robotfos">
-<suite id="s1-s1" name="Sorting Price" source="C:\Users\Zsiros-JuhaszZalan\Documents\GitHub\robotfos\sorting_price.robot">
-<test id="s1-s1-t1" name="Sort products price low to high" line="10">
+<suite id="s1-s1" name="Check" source="C:\Users\Zsiros-JuhaszZalan\Documents\GitHub\robotfos\check.robot">
+<test id="s1-s1-t1" name="Üres mezők ellenőrzése" line="7">
 <kw name="Login with standard user" owner="LoginKeywords">
 <kw name="Open Browser" owner="Selenium2Library">
-<msg time="2026-02-27T09:45:47.733620" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<msg time="2026-02-27T09:45:47.994722" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+<msg time="2026-03-06T08:49:33.255540" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-03-06T08:49:33.582586" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
 <arg>https://www.saucedemo.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-27T09:45:47.733380" elapsed="1.160714"/>
+<status status="PASS" start="2026-03-06T08:49:33.255231" elapsed="1.735332"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-27T09:45:51.895390" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-03-06T08:49:37.991777" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-27T09:45:48.894372" elapsed="3.001481"/>
+<status status="PASS" start="2026-03-06T08:49:34.990798" elapsed="3.001518"/>
 </kw>
 <kw name="Input Text" owner="Selenium2Library">
-<msg time="2026-02-27T09:45:51.897194" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2026-03-06T08:49:37.994007" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-27T09:45:51.896303" elapsed="0.074993"/>
+<status status="PASS" start="2026-03-06T08:49:37.992787" elapsed="0.071672"/>
 </kw>
 <kw name="Input Password" owner="Selenium2Library">
-<msg time="2026-02-27T09:45:51.971853" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2026-02-27T09:45:51.989536" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-03-06T08:49:38.064933" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-03-06T08:49:38.081847" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id=password</arg>
 <arg>secret_sauce</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-27T09:45:51.971541" elapsed="0.043298"/>
+<status status="PASS" start="2026-03-06T08:49:38.064647" elapsed="0.044500"/>
 </kw>
 <kw name="Click Button" owner="Selenium2Library">
-<msg time="2026-02-27T09:45:52.015257" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-03-06T08:49:38.109608" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-27T09:45:52.015009" elapsed="0.067104"/>
+<status status="PASS" start="2026-03-06T08:49:38.109353" elapsed="0.064006"/>
 </kw>
-<status status="PASS" start="2026-02-27T09:45:47.732748" elapsed="4.349517"/>
+<status status="PASS" start="2026-03-06T08:49:33.254650" elapsed="4.918859"/>
 </kw>
 <kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-02-27T09:45:52.082849" level="INFO">Clicking element 'class=product_sort_container'.</msg>
-<arg>class=product_sort_container</arg>
+<msg time="2026-03-06T08:49:38.174119" level="INFO">Clicking element 'class=shopping_cart_link'.</msg>
+<arg>class=shopping_cart_link</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-27T09:45:52.082582" elapsed="0.046164"/>
+<status status="PASS" start="2026-03-06T08:49:38.173832" elapsed="0.037507"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-27T09:45:54.129831" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-27T09:45:52.129035" elapsed="2.001404"/>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-03-06T08:49:38.211902" level="INFO">Clicking button 'id=checkout'.</msg>
+<arg>id=checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-06T08:49:38.211638" elapsed="0.045925"/>
 </kw>
-<kw name="Select From List By Label" owner="Selenium2Library">
-<msg time="2026-02-27T09:45:54.132705" level="INFO">Selecting options from selection list 'class=product_sort_container' by label Price (low to high).</msg>
-<arg>class=product_sort_container</arg>
-<arg>Price (low to high)</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-02-27T09:45:54.131598" elapsed="0.058737"/>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-06T08:49:38.258106" level="INFO">Typing text '"Bence"' into text field 'id=first-name'.</msg>
+<arg>id=first-name</arg>
+<arg>"Bence"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-06T08:49:38.257832" elapsed="0.047644"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-27T09:45:58.192134" level="INFO">Slept 4 seconds.</msg>
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-27T09:45:54.190730" elapsed="4.002349"/>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-06T08:49:38.306156" level="INFO">Typing text '"Kiráj"' into text field 'id=last-name'.</msg>
+<arg>id=last-name</arg>
+<arg>"Kiráj"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-06T08:49:38.305862" elapsed="0.044340"/>
 </kw>
-<kw name="Get all products">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2026-02-27T09:45:58.200847" level="INFO">${products} = []</msg>
-<var>${products}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-02-27T09:45:58.198120" elapsed="0.003609"/>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-06T08:49:38.350823" level="INFO">Typing text '"6067"' into text field 'id=postal-code'.</msg>
+<arg>id=postal-code</arg>
+<arg>"6067"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-06T08:49:38.350503" elapsed="0.044030"/>
 </kw>
-<kw name="Get WebElements" owner="Selenium2Library">
-<msg time="2026-02-27T09:45:58.241614" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff708dfaa55
-	0x7ff708b58630
-	0x7ff7088ed546
-	0x7ff708938113
-	0x7ff7089718e2
-	0x7ff70896bb11
-	0x7ff70896adc3
-	0x7ff7088b6505
-	0x7ff708e27810
-	0x7ff708e21afd
-	0x7ff708e42c1a
-	0x7ff708b73345
-	0x7ff708b7b81c
-	0x7ff7088b536a
-	0x7ff708f82b08
-	0x7ff89e1ee8d7
-	0x7ff89ef5c34c
-</msg>
-<msg time="2026-02-27T09:45:58.251559" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=145.0.7632.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff708dfaa55
-	0x7ff708b58630
-	0x7ff7088ed75d
-	0x7ff7088d8c72
-	0x7ff7088ff015
-	0x7ff7089790e0
-	0x7ff708995282
-	0x7ff708939098
-	0x7ff708939f83
-	0x7ff708e27810
-	0x7ff708e21afd
-	0x7ff708e42c1a
-	0x7ff708b73345
-	0x7ff708b7b81c
-	0x7ff708b61924
-	0x7ff708b61ad6
-	0x7ff708b47e47
-	0x7ff89e1ee8d7
-	0x7ff89ef5c34c
-</msg>
-<var>@{product_elements}</var>
-<arg>class=inventory_item_price</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="FAIL" start="2026-02-27T09:45:58.202661" elapsed="0.123578">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=145.0.7632.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff708dfaa55
-	0x7ff708b58630
-	0x7ff7088ed75d
-	0x7ff7088d8c72
-	0x7ff7088ff015
-	0x7ff7089790e0
-	0x7ff708995282
-	0x7ff708939098
-	0x7ff708939f83
-	0x7ff708e27810
-	0x7ff708e21afd
-	0x7ff708e42c1a
-	0x7ff708b73345
-	0x7ff708b7b81c
-	0x7ff708b61924
-	0x7ff708b61ad6
-	0x7ff708b47e47
-	0x7ff89e1ee8d7
-	0x7ff89ef5c34c
-</status>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-03-06T08:49:38.395218" level="INFO">Clicking button 'id=continue'.</msg>
+<arg>id=continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-06T08:49:38.394868" elapsed="0.048420"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<var>${szoveg}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-02-27T09:45:58.326685" elapsed="0.000075"/>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2026-03-06T08:49:38.550854" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-03-06T08:49:38.551076" level="FAIL">Page should have contained text 'Error: First Name is required' but did not.</msg>
+<arg>text=Error: First Name is required</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-03-06T08:49:38.443601" elapsed="0.142805">Page should have contained text 'Error: First Name is required' but did not.</status>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${product_price}</var>
-<arg>${szoveg[1:]}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2026-02-27T09:45:58.326871" elapsed="0.000074"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2026-02-27T09:45:58.327025" elapsed="0.000053"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2026-02-27T09:45:58.326561" elapsed="0.000558"/>
-</iter>
-<var>${element}</var>
-<value>@{product_elements}</value>
-<status status="NOT RUN" start="2026-02-27T09:45:58.326396" elapsed="0.000767"/>
-</for>
-<return>
-<value>${products}</value>
-<status status="NOT RUN" start="2026-02-27T09:45:58.327216" elapsed="0.000049"/>
-</return>
-<var>${product_prices}</var>
-<status status="FAIL" start="2026-02-27T09:45:58.195633" elapsed="0.131737">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=145.0.7632.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff708dfaa55
-	0x7ff708b58630
-	0x7ff7088ed75d
-	0x7ff7088d8c72
-	0x7ff7088ff015
-	0x7ff7089790e0
-	0x7ff708995282
-	0x7ff708939098
-	0x7ff708939f83
-	0x7ff708e27810
-	0x7ff708e21afd
-	0x7ff708e42c1a
-	0x7ff708b73345
-	0x7ff708b7b81c
-	0x7ff708b61924
-	0x7ff708b61ad6
-	0x7ff708b47e47
-	0x7ff89e1ee8d7
-	0x7ff89ef5c34c
-</status>
-</kw>
-<kw name="Veryfy price low to high sorting">
-<arg>${product_prices}</arg>
-<status status="NOT RUN" start="2026-02-27T09:45:58.327990" elapsed="0.000090"/>
-</kw>
-<kw name="Close All Browsers" owner="Selenium2Library">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="NOT RUN" start="2026-02-27T09:45:58.328570" elapsed="0.000201"/>
-</kw>
-<status status="FAIL" start="2026-02-27T09:45:47.730640" elapsed="10.598684">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=145.0.7632.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff708dfaa55
-	0x7ff708b58630
-	0x7ff7088ed75d
-	0x7ff7088d8c72
-	0x7ff7088ff015
-	0x7ff7089790e0
-	0x7ff708995282
-	0x7ff708939098
-	0x7ff708939f83
-	0x7ff708e27810
-	0x7ff708e21afd
-	0x7ff708e42c1a
-	0x7ff708b73345
-	0x7ff708b7b81c
-	0x7ff708b61924
-	0x7ff708b61ad6
-	0x7ff708b47e47
-	0x7ff89e1ee8d7
-	0x7ff89ef5c34c
-</status>
+<status status="FAIL" start="2026-03-06T08:49:33.252204" elapsed="5.334658">Page should have contained text 'Error: First Name is required' but did not.</status>
 </test>
-<status status="FAIL" start="2026-02-27T09:45:47.545327" elapsed="10.791844"/>
+<status status="FAIL" start="2026-03-06T08:49:33.032478" elapsed="5.561309"/>
 </suite>
-<status status="FAIL" start="2026-02-27T09:45:47.512642" elapsed="10.831115"/>
+<status status="FAIL" start="2026-03-06T08:49:33.003283" elapsed="5.592804"/>
 </suite>
 <statistics>
 <total>
@@ -253,31 +101,10 @@ Symbols not available. Dumping unresolved backtrace:
 </tag>
 <suite>
 <stat name="Robotfos" id="s1" pass="0" fail="1" skip="0">Robotfos</stat>
-<stat name="Sorting Price" id="s1-s1" pass="0" fail="1" skip="0">Robotfos.Sorting Price</stat>
+<stat name="Check" id="s1-s1" pass="0" fail="1" skip="0">Robotfos.Check</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-02-27T09:45:47.994722" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
-<msg time="2026-02-27T09:45:58.241614" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff708dfaa55
-	0x7ff708b58630
-	0x7ff7088ed546
-	0x7ff708938113
-	0x7ff7089718e2
-	0x7ff70896bb11
-	0x7ff70896adc3
-	0x7ff7088b6505
-	0x7ff708e27810
-	0x7ff708e21afd
-	0x7ff708e42c1a
-	0x7ff708b73345
-	0x7ff708b7b81c
-	0x7ff7088b536a
-	0x7ff708f82b08
-	0x7ff89e1ee8d7
-	0x7ff89ef5c34c
-</msg>
+<msg time="2026-03-06T08:49:33.582586" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
 </errors>
 </robot>
